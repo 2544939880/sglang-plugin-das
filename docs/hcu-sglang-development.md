@@ -3540,3 +3540,4 @@ GenerationBatchResult 有此可选字段。插件在读取时处理缺省，保�
 Berlin、Tokyo、LANTERN-8306、12，均为 stop。请求后健康检查 HTTP 200。
 官方仓库与验证副本的 10,592 个 tracked 文件哈希一致。此结果覆盖本次短问答；
 原始 JSON 和服务日志在验证目录 logs/nmz107/attempt-8。两项修复均位于 plugin。
+DTK26.10/Python3.12 镜像中的真实插件发现、构造和 AROUND 分发已通过：两组八 rank 的 Q/K 共 32 项逐元素匹配原生；同一 Graph 更换输入后重放两组 Q/K，也均逐元素匹配。FP32 canonical cache 对象未变，typed memo 为 BF16，关闭开关后的构造保持原分支。记录为任务产物 `rope-runtime-v4.json`；固定参考和捕获哈希见 adapter-das `docs/glm5.3-w4a8-attention-alignment.json`。offsets 与融合 KV-store 保留原语义，但本轮组件不声称覆盖这些调用。移除观测后的六组模型数值合同仍待复测；组件通过不等于模型精度通过。
