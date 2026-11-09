@@ -310,8 +310,8 @@ def register_hooks():
             _begin_scheduler_iteration_default
         )
 
-    native.resolve_disagg_metadata_config = resolve_disagg_metadata_config
-    adapted = types.FunctionType(init_disaggregation.__code__, vars(native),
-        'init_disaggregation', init_disaggregation.__defaults__)
-    HookRegistry.register('sglang.srt.managers.scheduler.Scheduler.init_disaggregation',
-        adapted, HookType.REPLACE)
+    HookRegistry.register(
+        "sglang.srt.managers.scheduler.Scheduler.init_disaggregation",
+        init_disaggregation,
+        HookType.REPLACE,
+    )
